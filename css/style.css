@@ -1,24 +1,94 @@
-@font-face {
-  font-family: "644Number";
-  src: url("../font/644RoomNumber.woff2") format("woff2");
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
-@font-face {
-  font-family: "HelveticaMedium";
-  src: url("../font/HelveticaNowDisplayMedium.woff2") format("woff2");
+.header .center {
+  position: relative;
 }
-@font-face {
-  font-family: "HelveticaRegular";
-  src: url("../font/HelveticaNowDisplayRegular.woff2") format("woff2");
+.header .center .sub_header {
+  display: flex;
+  margin: 8px 24px;
+  justify-content: end;
+  gap: 16px;
 }
-@font-face {
-  font-family: "NotoSansKR-Bold";
-  src: url("../font/NotoSansKR-Bold.woff2") format("woff2");
+.header .center .sub_header .depth01 {
+  font-size: 12px;
+  color: #999;
+  transition: color 0.3s;
 }
-@font-face {
-  font-family: "NotoSansKR-Medium";
-  src: url("../font/NotoSansKR-Medium.woff2") format("woff2");
+.header .center .sub_header .depth01:hover {
+  color: #f9bb00;
 }
-@font-face {
-  font-family: "RecoletRegular";
-  src: url("../font/RecoletaRegular.woff2") format("woff2");
+.header .center .main_header {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding: 0 24px;
+}
+.header .center .main_header .logo {
+  position: absolute;
+  width: 100%;
+  max-width: 113px;
+}
+.header .center .main_header .gnb {
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.header .center .main_header .gnb:hover .list li .depth02 {
+  opacity: 1;
+  cursor: default;
+  overflow: visible;
+}
+.header .center .main_header .gnb:hover .gnb_bg_wrap {
+  height: 230px;
+}
+.header .center .main_header .gnb .list {
+  display: flex;
+  gap: 88px;
+}
+.header .center .main_header .gnb .list li .depth01 {
+  display: block;
+  font-size: 17px;
+  transition: color 0.3s;
+  color: #333;
+  font-size: 20px;
+}
+.header .center .main_header .gnb .list li .depth01:hover {
+  color: #f9bb00;
+}
+.header .center .main_header .gnb .list li .depth02 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  cursor: none;
+  position: absolute;
+  z-index: 10;
+  top: 140px;
+  overflow: hidden;
+}
+.header .center .main_header .gnb .list li .depth02 li {
+  height: 22px;
+}
+.header .center .main_header .gnb .list li .depth02 li .txt {
+  transition: color 0.3s;
+  color: #ebebeb;
+  font-size: 15px;
+  letter-spacing: -0.025rem;
+}
+.header .center .main_header .gnb .list li .depth02 li .txt:hover {
+  color: #f9bb00;
+}
+.header .center .main_header .gnb .gnb_bg_wrap {
+  position: fixed;
+  top: 122px;
+  left: 0;
+  right: 0;
+  height: 0;
+  transition: height 0.3s;
+  background: rgba(78, 80, 89, 0.8666666667);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }

@@ -5,9 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>홈 - 이마트24</title>
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <!-- link-css -->
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/swiper.css" />
+    <!-- link-js -->
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/greensock/gsap.min.js"></script>
@@ -15,21 +21,67 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="logo">
-        <img src="../images/common/logo.png" alt="emart24" />
-      </h1>
-      <nav class="nav">
-        <h2 class="blind">nav</h2>
-        <ul class="list">
-          <li>
-            <a href="#" class="depth01">
-              <ul class="depth02">
-                <li><a href="#"></a></li>
-              </ul>
-            </a>
-          </li>
+      <div class="center">
+        <ul class="sub_header">
+          <li><a href="#" class="depth01">고객센터</a></li>
+          <li><a href="#" class="depth01">이마트24 소개</a></li>
+          <li><a href="#" class="depth01">채용안내</a></li>
+          <li><a href="#" class="depth01">전자 계약 시스템</a></li>
         </ul>
-      </nav>
+        <div class="main_header">
+          <h1 class="logo">
+            <span class="blind">emart24</span>
+            <img src="../images/common/logo.png" alt="emart24" class="img" />
+          </h1>
+          <nav class="gnb">
+            <h2 class="blind">gnb</h2>
+            <ul class="list">
+              <li>
+                <a href="#" class="depth01">상품</a>
+                <ul class="depth02">
+                  <li><a href="#" class="txt">행사 상품</a></li>
+                  <li><a href="#" class="txt">차별화 상품</a></li>
+                  <li><a href="#" class="txt">Fresh Food</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="depth01">매장찾기</a>
+                <ul class="depth02">
+                  <li><a href="#" class="txt">매장찾기</a></li>
+                  <li><a href="#" class="txt">3D 매장 체험</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="depth01">서비스</a>
+                <ul class="depth02">
+                  <li><a href="#" class="txt">APP 서비스</a></li>
+                  <li><a href="#" class="txt">생활 서비스</a></li>
+                  <li><a href="#" class="txt">제휴 서비스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="depth01">이벤트</a>
+                <ul class="depth02">
+                  <li><a href="#" class="txt">진행중인 이벤트</a></li>
+                  <li><a href="#" class="txt">종료된 이벤트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="depth01">창업 안내</a>
+                <ul class="depth02">
+                  <li><a href="#" class="txt">이마트24 특징</a></li>
+                  <li><a href="#" class="txt">창업 가이드</a></li>
+                  <li><a href="#" class="txt">창업 설명회</a></li>
+                  <li><a href="#" class="txt">창업 성공기</a></li>
+                  <li><a href="#" class="txt">창업 상담</a></li>
+                  <li><a href="#" class="txt">추천 매장 소개</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="gnb_bg_wrap"></div>
+          </nav>
+        </div>
+      </div>
     </header>
     <main class="main">
       <section class="main_visual sec"></section>
@@ -37,8 +89,14 @@
         <section class="sec"></section>
         <article class="art"></article>
         <section class="sec"></section>
+        <section class="sec"></section>
+        <section class="sec"></section>
+        <article class="art"></article>
       </div>
     </main>
     <footer class="footer"></footer>
+    <script>
+      $(document).ready(function () {});
+    </script>
   </body>
 </html>

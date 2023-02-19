@@ -1,3 +1,100 @@
 @import "vars";
 @import "mixin";
-@import "font";
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  .center {
+    position: relative;
+    .sub_header {
+      display: flex;
+      margin: 8px 24px;
+      justify-content: end;
+      gap: 16px;
+      .depth01 {
+        font-size: $font-small;
+        color: $gray-color9;
+        transition: color 0.3s;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+    .main_header {
+      display: flex;
+      align-items: center;
+      height: 90px;
+      padding: 0 24px;
+      .logo {
+        position: absolute;
+        width: 100%;
+        max-width: 113px;
+      }
+      .gnb {
+        margin: 0 auto;
+        padding: 0 24px;
+        &:hover {
+          .list li .depth02 {
+            opacity: 1;
+            cursor: default;
+            overflow: visible;
+          }
+          .gnb_bg_wrap {
+            height: 230px;
+          }
+        }
+        .list {
+          display: flex;
+          gap: 88px;
+          li {
+            .depth01 {
+              display: block;
+              font-size: $font-normal + 1;
+              transition: color 0.3s;
+              color: $black-color;
+              font-size: $font-medium;
+              &:hover {
+                color: $main-color;
+              }
+            }
+            .depth02 {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              opacity: 0;
+              cursor: none;
+              position: absolute;
+              z-index: 10;
+              top: 140px;
+              overflow: hidden;
+              li {
+                height: 22px;
+                .txt {
+                  transition: color 0.3s;
+                  color: $gray-color3;
+                  font-size: $font-normal - 1;
+                  letter-spacing: -0.025rem;
+                  &:hover {
+                    color: $main-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .gnb_bg_wrap {
+          position: fixed;
+          top: calc(90px + 16px + 8px * 2);
+          left: 0;
+          right: 0;
+          height: 0;
+          transition: height 0.3s;
+          background: #4e5059dd;
+          backdrop-filter: blur(5px);
+        }
+      }
+    }
+  }
+}
